@@ -1,11 +1,17 @@
 import React from 'react';
 import style from './Heading.module.css';
+import propTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
-export const Heading = ({text}) => {
-  return (
-    <div className={style.heading}>
-      <h1>{text}</h1>
-    </div>
-  );
+export class ClassComponent extends React.Component {
+  Heading = ({text}) => {
+    return (
+      <div className={style.heading}>
+        <h1>{text}</h1>
+      </div>
+    );
+  };
+}
+
+ClassComponent.propTypes = {
+  text: propTypes.string,
 };
