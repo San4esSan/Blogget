@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './Auth.module.css';
 
-// eslint-disable-next-line react/prop-types
 export const Auth = ({auth}) => {
   return (
     <button className={style.button}>
