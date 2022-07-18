@@ -1,2 +1,2 @@
-import { PostDate } from './PostDate';
+import {PostDate} from './PostDate';
 export default PostDate;

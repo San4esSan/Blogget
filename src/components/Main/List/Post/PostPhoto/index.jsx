@@ -1,2 +1,2 @@
-import { PostPhoto } from './PostPhoto';
+import {PostPhoto} from './PostPhoto';
 export default PostPhoto;

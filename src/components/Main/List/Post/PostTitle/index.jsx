@@ -1,2 +1,2 @@
-import { PostTitle } from './PostTitle';
+import {PostTitle} from './PostTitle';
 export default PostTitle;

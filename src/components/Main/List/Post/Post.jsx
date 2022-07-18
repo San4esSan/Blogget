@@ -4,14 +4,14 @@ import notphoto from './img/notphoto.jpg';
 import PropTypes from 'prop-types';
 import formatDate from '../../../../utils/formatDate';
 import Rating from './Rating';
-import { PostTitle } from './PostTitle/PostTitle';
-import { LinkAuthor } from './LinkAuthor/LinkAuthor';
-import { PostPhoto } from './PostPhoto/PostPhoto';
-import { PostDelete } from './PostDelete/PostDelete';
-import { PostDate } from './PostDate/PostDate';
+import {PostTitle} from './PostTitle/PostTitle';
+import {LinkAuthor} from './LinkAuthor/LinkAuthor';
+import {PostPhoto} from './PostPhoto/PostPhoto';
+import {PostDelete} from './PostDelete/PostDelete';
+import {PostDate} from './PostDate/PostDate';
 
-export const Post = ({ postData }) => {
-  const { title, author, ups, date } = postData;
+export const Post = ({postData}) => {
+  const {title, author, ups, date} = postData;
   // console.log('title, author, ups, date: ', title, author, ups, date);
   return (
     <li className={style.post}>

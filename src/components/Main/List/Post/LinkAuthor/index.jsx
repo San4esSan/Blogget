@@ -1,2 +1,2 @@
-import { LinkAuthor } from './LinkAuthor';
+import {LinkAuthor} from './LinkAuthor';
 export default LinkAuthor;
