@@ -60,7 +60,7 @@
         "functions": false
       }
     ],
-    "arrow-body-style": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
     "arrow-spacing": ["error"],
     "no-confusing-arrow": [
       "error",
@@ -139,7 +139,7 @@
     "max-len": [
       "error",
       {
-        "code": false,
+        "code": 180,
         "tabWidth": 2,
         "ignoreUrls": true,
         "ignorePattern": "goog.(module|require)"
