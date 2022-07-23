@@ -16,9 +16,9 @@
 }
 
 @media (min-width: 580px) {
-  .linkPost {
+  /* .linkPost {
     font-size: 26px;
-  }
+  } */
 
   .linkPost:hover {
     color: #cc6633;
@@ -30,7 +30,7 @@
 }
 
 @media (min-width: 768px) {
-  .linkPost {
+  /* .linkPost {
     font-size: 32px;
-  }
+  } */
 }

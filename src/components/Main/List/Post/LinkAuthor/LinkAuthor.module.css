@@ -6,7 +6,7 @@
   width: min-content;
   display: -webkit-box;
   transition: color 0.36s ease-in-out;
-  color: #cc6633;
+  /* color: #cc6633; */
 }
 
 @media (min-width: 580px) {
