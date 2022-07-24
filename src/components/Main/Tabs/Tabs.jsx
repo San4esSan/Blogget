@@ -22,6 +22,8 @@ export const Tabs = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdown, setIsDropDown] = useState(true);
 
+  const [output, setOutput] = useState('add item');
+
   const handleResize = () => {
     if (document.documentElement.clientWidth < 768) {
       setIsDropDown(true);
@@ -41,22 +43,29 @@ export const Tabs = () => {
 
   return (
     <div className={style.container}>
-      {isDropdown && <div className={style.wrapperBtn}>
-        <button
-          className={style.btn}
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-        >
-          add item
-          <ArrowIcon width={15} height={15} />
-        </button>
-      </div>}
+      {isDropdown && (
+        <div className={style.wrapperBtn}>
+          <button
+            className={style.btn}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            {output}
+            <ArrowIcon width={15} height={15} />
+          </button>
+        </div>
+      )}
       {(isDropdownOpen || !isDropdown) && (
         <ul className={style.list} onClick={() => setIsDropdownOpen(false)}>
           {LIST.map(({value, id, Icon}) => (
             <li className={style.item} key={id}>
-              <button className={style.btn} onClick={() => {}}>
+              <button
+                className={style.btn}
+                onClick={() => {
+                  setOutput(value, Icon);
+                }}
+              >
                 {value}
-                {Icon && <Icon width={30} height={30}/>}
+                {Icon && <Icon width={30} height={30} />}
               </button>
             </li>
           ))}
