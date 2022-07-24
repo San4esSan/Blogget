@@ -14,20 +14,20 @@ export const Text = (prop) => {
     children,
     href,
     center,
-    fontWeight = 'medium',
+    fontWeight,
   } = prop;
 
   const classes = classNames(
     className,
     style[color],
+    style[fontWeight],
     {[style.center]: center},
-    {[style.fontWeight]: fontWeight},
     {[style[`fs${size}`]]: size},
     {[style[`fst${tsize}`]]: tsize},
     {[style[`fsd${dsize}`]]: dsize},
   );
 
-  return <As className={classes} fontWeight={fontWeight} href={href}>{children}</As>;
+  return <As className={classes} href={href}>{children}</As>;
 };
 
 Text.propTypes = {

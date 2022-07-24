@@ -9,7 +9,7 @@ import {ReactComponent as EyeIcon} from './img/top.svg';
 import {ReactComponent as PostIcon} from './img/best.svg';
 import {ReactComponent as SaveIcon} from './img/hot.svg';
 import {debounceRaf} from '../../../utils/debounce';
-// import {Text} from '../../../Ui/Text/Text';
+import {Text} from '../../../Ui/Text/Text';
 
 const LIST = [
   {value: 'Главная', Icon: EyeIcon},
@@ -21,6 +21,8 @@ const LIST = [
 export const Tabs = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdown, setIsDropDown] = useState(true);
+
+  const [output, setOutput] = useState('add item');
 
   const handleResize = () => {
     if (document.documentElement.clientWidth < 768) {
@@ -46,19 +48,21 @@ export const Tabs = () => {
           className={style.btn}
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          add item
+          {output}
           <ArrowIcon width={15} height={15} />
         </button>
       </div>}
       {(isDropdownOpen || !isDropdown) && (
         <ul className={style.list} onClick={() => setIsDropdownOpen(false)}>
           {LIST.map(({value, id, Icon}) => (
-            <li className={style.item} key={id}>
-              <button className={style.btn} onClick={() => {}}>
+            <Text As={'li'} className={style.item} key={id}>
+              <button className={style.btn} onClick={() => {
+                setOutput(value);
+              }}>
                 {value}
                 {Icon && <Icon width={30} height={30}/>}
               </button>
-            </li>
+            </Text>
           ))}
         </ul>
       )}
