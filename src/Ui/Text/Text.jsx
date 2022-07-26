@@ -20,8 +20,8 @@ export const Text = (prop) => {
   const classes = classNames(
     className,
     style[color],
+    style[fontWeight],
     {[style.center]: center},
-    {[style.fontWeight]: fontWeight},
     {[style[`fs${size}`]]: size},
     {[style[`fst${tsize}`]]: tsize},
     {[style[`fsd${dsize}`]]: dsize},

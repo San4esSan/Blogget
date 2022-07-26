@@ -9,7 +9,7 @@ import {ReactComponent as EyeIcon} from './img/top.svg';
 import {ReactComponent as PostIcon} from './img/best.svg';
 import {ReactComponent as SaveIcon} from './img/hot.svg';
 import {debounceRaf} from '../../../utils/debounce';
-// import {Text} from '../../../Ui/Text/Text';
+import {Text} from '../../../Ui/Text/Text';
 
 const LIST = [
   {value: 'Главная', Icon: EyeIcon},
@@ -57,17 +57,14 @@ export const Tabs = () => {
       {(isDropdownOpen || !isDropdown) && (
         <ul className={style.list} onClick={() => setIsDropdownOpen(false)}>
           {LIST.map(({value, id, Icon}) => (
-            <li className={style.item} key={id}>
-              <button
-                className={style.btn}
-                onClick={() => {
-                  setOutput(value, Icon);
-                }}
-              >
+            <Text As={'li'} className={style.item} key={id}>
+              <button className={style.btn} onClick={() => {
+                setOutput(value);
+              }}>
                 {value}
-                {Icon && <Icon width={30} height={30} />}
+                {Icon && <Icon width={30} height={30}/>}
               </button>
-            </li>
+            </Text>
           ))}
         </ul>
       )}
