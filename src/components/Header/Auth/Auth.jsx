@@ -6,7 +6,7 @@ import {urlAuth} from '../../../api/auth';
 import {Text} from '../../../Ui/Text/Text';
 import {URL_API} from '../../../api/const';
 
-export const Auth = ({token}) => {
+export const Auth = ({token, delToken}) => {
   const [auth, setAuth] = useState({});
   const [showLogout, setShowLogout] = useState(false);
 
@@ -29,7 +29,7 @@ export const Auth = ({token}) => {
       })
       .catch((err) => {
         console.err(err);
-        // delToken();
+        delToken();
         setAuth({});
       });
   }, [token]);
@@ -39,7 +39,7 @@ export const Auth = ({token}) => {
   };
 
   const logOut = () => {
-    // delToken();
+    delToken();
     setAuth();
   };
 
