@@ -40,7 +40,7 @@ export const Auth = ({token, delToken}) => {
 
   const logOut = () => {
     delToken();
-    setAuth();
+    setAuth(!showLogout);
   };
 
   return (
